@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt</title>
+</head>
+<body>
+<!--bài tập 3 :-->
+Nhập số a : <input type="text" id="number1"><br>
+Nhập số b : <input type="text" id="number2">
+<h1 id="result" onclick="kq()">Tính s=a*b </h1>
+<hr>
+<!--bài 4-->
+Nhập số A : <input type="text" id="soA" onchange="nhapsoa()">
+<hr>
+<!--4.b-->
+Nhập Số A : <input id="soA1"><button onclick="tinha2()">Tính a^2</button>
+<br>
+Nhập Số B : <input id="soB1"><button onclick="tinhb2()">Tính b^2</button>
+<hr>
+<!--nhập số đầu a : <input id="firtnumber"><br>
+nhập số cuối b : <input id="endnumber"><br>
+Tổng từ số a đến b : <span id="result"></span><button onclick="tongab()">result</button>-->
+</body>
+</html>
+<script>
+    // bài 1 : câu lệnh để hiển thị 1 hộp thoại
+    alert('duong')
+    // bài 2 : câu lệnh để nhận 1 giá trị từ 1 hộp thoại
+    let SoA = prompt('nhập 1 số','')
+    alert('binhphuong : ' + SoA**2)
+    // bài 3 : Viết các bước để code nhận a và b từ 2 ô input và hiển thị S = a*b ra thẻ h1
+    function kq() {
+        let Number1 = document.getElementById('number1').value
+        let Number2 = document.getElementById('number2').value
+        let Snhan = Number1 * Number2
+        document.getElementById('result').innerHTML = Snhan
+    }
+    // 4. Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p:
+    //    a.Nhập vào a, hiển thị ra chu vi và diện tích và hình vuông độ dài cạnh a
+        function nhapsoa() {
+            let aValue = document.getElementById('soA').value
+            let chuvi = 4*aValue
+            let dientich = aValue**2
+            alert('Chu vi hình vuông là : ' + chuvi)
+            alert('diện tích hình vuông là : ' +dientich)
+        }
+     //b. Nhập vào a và b, tính a^2, a^b
+    function tinha2() {
+        let abinh = parseInt(document.getElementById('soA1').value)
+        alert("bình phương của a là : " + abinh**2 )
+    }
+    function tinhb2() {
+        let bbinh = parseInt(document.getElementById('soB1').value)
+        alert("bình phương của b là : " + bbinh**2 )
+    }
+    //c. Nhập vào a và b, tính tổng các số từ a đến b
+
+/*    function tongab() {
+        let FirtA = parseInt(document.getElementById('firtnumber').value)
+        let EndB = parseInt(document.getElementById('endnumber').value)
+        let hieuab = EndB - FirtA
+        let tongab = FirtA + EndB
+        if(FirtA >= EndB){
+            let tongab = tongab +
+        }
+    }*/
+</script>
