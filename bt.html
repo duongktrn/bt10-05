@@ -63,22 +63,10 @@ Tổng từ số a đến b : <span id="resultAB"></span><br>
         let FirtA = Number(document.getElementById('firtnumber').value)
         let EndB = Number(document.getElementById('endnumber').value)
         if(FirtA<EndB) {
-            if (EndB < 0) {
-                let tong1A = (FirtA + 1) * FirtA * 0.5
-                let tong1B = (EndB + 1) * EndB * 0.5
-                let tongAB =  (tong1B - tong1A) + FirtA
-                document.getElementById('resultAB').innerHTML = tongAB
-            } else if (FirtA < 0) {
-                let tong1A = (FirtA + 1) * FirtA * 0.5
-                let tong1B = (EndB + 1) * EndB * 0.5
-                let tongAB = (tong1B + tong1A)
-                document.getElementById('resultAB').innerHTML = tongAB
-            } else {
                 let tong1A = (FirtA + 1) * FirtA * 0.5
                 let tong1B = (EndB + 1) * EndB * 0.5
                 let tongAB = (tong1B - tong1A) + FirtA
                 document.getElementById('resultAB').innerHTML = tongAB
-                 }
         }else {alert('không tồn tại')}
     }
 
