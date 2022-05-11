@@ -18,9 +18,12 @@ Nhập Số A : <input id="soA1"><button onclick="tinha2()">Tính a^2</button>
 <br>
 Nhập Số B : <input id="soB1"><button onclick="tinhb2()">Tính b^2</button>
 <hr>
-<!--nhập số đầu a : <input id="firtnumber"><br>
+Tính tổng từ a tới b :
+<br>
+nhập số đầu a : <input id="firtnumber"><br>
 nhập số cuối b : <input id="endnumber"><br>
-Tổng từ số a đến b : <span id="result"></span><button onclick="tongab()">result</button>-->
+Tổng từ số a đến b : <span id="resultAB"></span><br>
+<button onclick="tongab()">result</button>
 </body>
 </html>
 <script>
@@ -56,13 +59,27 @@ Tổng từ số a đến b : <span id="result"></span><button onclick="tongab()
     }
     //c. Nhập vào a và b, tính tổng các số từ a đến b
 
-/*    function tongab() {
-        let FirtA = parseInt(document.getElementById('firtnumber').value)
-        let EndB = parseInt(document.getElementById('endnumber').value)
-        let hieuab = EndB - FirtA
-        let tongab = FirtA + EndB
-        if(FirtA >= EndB){
-            let tongab = tongab +
-        }
-    }*/
+    function tongab() {
+        let FirtA = Number(document.getElementById('firtnumber').value)
+        let EndB = Number(document.getElementById('endnumber').value)
+        if(FirtA<EndB) {
+            if (EndB < 0) {
+                let tong1A = (FirtA + 1) * FirtA * 0.5
+                let tong1B = (EndB + 1) * EndB * 0.5
+                let tongAB =  (tong1B - tong1A) + FirtA
+                document.getElementById('resultAB').innerHTML = tongAB
+            } else if (FirtA < 0) {
+                let tong1A = (FirtA + 1) * FirtA * 0.5
+                let tong1B = (EndB + 1) * EndB * 0.5
+                let tongAB = (tong1B + tong1A)
+                document.getElementById('resultAB').innerHTML = tongAB
+            } else {
+                let tong1A = (FirtA + 1) * FirtA * 0.5
+                let tong1B = (EndB + 1) * EndB * 0.5
+                let tongAB = (tong1B - tong1A) + FirtA
+                document.getElementById('resultAB').innerHTML = tongAB
+                 }
+        }else {alert('không tồn tại')}
+    }
+
 </script>
